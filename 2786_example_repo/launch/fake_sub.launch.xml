@@ -1,0 +1,9 @@
+<launch>
+
+    <!-- execute the trajectory in 'interpolate' mode or jump to goal position in 'last point' mode -->
+    <arg name="execution_type" default="interpolate" />
+
+    <!-- The rest of the params are specific to this plugin -->
+    <rosparam subst_value="true" file="$(find moveit_bug_2786_example_repo)/config/fake_config.yaml"/>
+
+</launch>

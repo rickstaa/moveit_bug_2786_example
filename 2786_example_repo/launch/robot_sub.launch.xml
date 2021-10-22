@@ -1,0 +1,6 @@
+<launch>
+  <!-- this argument is not used here, only necessary so that this launch file has the same args as fake_moveit_controller_manager.launch -->
+  <arg name="execution_type" default="unused" />
+
+  <rosparam file="$(find moveit_bug_2786_example_repo)/config/panda_config.yaml"/>
+</launch>

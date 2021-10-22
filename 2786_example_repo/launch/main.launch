@@ -1,0 +1,11 @@
+<launch>
+
+    <arg name="execution_type" default="interpolate" />
+
+    <!-- Load the robot specific controller manager; this sets the moveit_controller_manager ROS parameter -->
+    <arg name="moveit_controller_manager" default="robot" />
+    <include file="$(dirname)/$(arg moveit_controller_manager)_sub.launch.xml">
+        <arg name="execution_type" value="$(arg execution_type)" />
+    </include>
+
+</launch>
